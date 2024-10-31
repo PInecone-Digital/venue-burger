@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stacked & Sizzling</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Stacked & Sizzling" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="vendors/bootstrap-5.3.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css?v=0.1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <img id="cover-image" src="" alt="cover image" loading="lazy" onError="this.onerror=null;this.src='/img/cover-placeholder.jpg';" />
+    </header>
+    <header class="bg-section-secondary">
+      <div class="container">
+        <div class="d-flex flex-row justify-content-between align-items-start pb-3">
+          <img id="logo" class="img-fluid rounded" src="" alt="" width="120" height="120" onError="this.onerror=null;this.src='/img/logo-placeholder.png';" />
+          <div class="d-flex py-2 gap-2">
+            <div class="dropdown">
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="dropdown" aria-expanded="false">...</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+            <a href="" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 448 493" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M323 0L300 217.3L260.9 34.1L138.1 60.1L177.2 243.3L0.200195 280.7L31.5002 427L342.8 492.8L414 333.8L447.9 13.1L323 0ZM224.6 315.3C218.2 321.1 209.7 320.6 200.7 317.6C191.7 314.6 187.7 303.8 191.1 290.7C193.6 281 205.6 279.5 211.6 279.4C213.9 279.4 216.1 279.8 218.2 280.7C222.4 282.6 229.6 286.7 231 292.9C233.1 301.9 231.1 309.4 224.6 315.3ZM314.7 325.3C310 333.4 297.8 334.4 285.8 328.6C277.7 324.6 277.7 314.6 278.6 308.4C279.1 305.1 280.4 301.9 282.5 299.2C285.4 295.5 290.2 290.8 295.8 290.6C304.9 290.4 312.7 294.4 317.1 301.8C321.7 309.2 319.5 317.3 314.7 325.3Z"
+                  fill="white"
+                />
+              </svg>
+              Deliveroo</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <header class="bg-section-secondary">
+      <div class="container">
+        <div id="venue-details">
+          <h2 class="card-title placeholder-glow">
+            <span class="placeholder col-6"></span>
+          </h2>
+          <p class="card-text placeholder-glow">
+            <span class="placeholder col-7"></span>
+            <span class="placeholder col-6"></span>
+          </p>
+          <p class="card-text placeholder-glow">
+            <span class="placeholder col-3"></span>
+            <span class="placeholder col-3"></span>
+            <span class="placeholder col-3"></span>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="bg-section-secondary sticky-top border-top border-secondary-subtle">
+      <div class="container">
+        <ul id="menu-nav" class="nav nav-underline flex-row flex-nowrap overflow-scroll gap-4"></ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <section id="menu_wrapper" class="mb-5"></section>
+    </div>
+
+    <!-- Item Modal -->
+    <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img id="modalFoodImage" class="img-fluid" src="" alt="" />
+            <button type="button" class="z-3 btn position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Close">
+              <img src="/img/close.svg" alt="" width="24" height="24" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="modalFoodTitle" class="food-title mb-1">Food title</p>
+            <p id="modalFoodPrice" class="menu-price mb-1">${item.price}</p>
+            <p id="modalFoodDescription" class="food-details">${item.description}</p>
+            <hr />
+            <div class="d-flex">
+              <img class="me-1" src="img/icon-info.svg" width="20" height="20" alt="" />
+              <p class="text-muted small">Questions about allergens, ingredients or cooking methods? Please contact the restaurant</p>
+            </div>
+            <div class="d-grid">
+              <a href="#" class="btn btn-primary" target="_blank">Order on Deliveroo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/index.js?v=0.1"></script>
+    <script src="vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
